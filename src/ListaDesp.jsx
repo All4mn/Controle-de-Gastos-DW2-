@@ -1,10 +1,15 @@
 import Despesa from "./Despesa"
 
-function ListaDesp(){
+function ListaDesp({despesas, remover}){
     return (
         <>
         <ul>
-            <Despesa/>
+            {despesas.map((despesa) => 
+                <Despesa
+                    nomeDespesa={despesa}
+                    onRemover={remover}
+                />
+            )}
         </ul>
         </>
     )

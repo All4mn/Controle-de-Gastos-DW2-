@@ -1,8 +1,8 @@
 import { useState } from "react";
 
 export default function InputDesp ({onAddDesp}){
-    const [nome, setNome] = useState = ('')
-    const [valor, setValor] = useState = ('')
+    const [nome, setNome] = useState('')
+    const [valor, setValor] = useState('')
 
     const addClasse = () => {
         const fixo = document.getElementById("fixo")
@@ -45,6 +45,12 @@ export default function InputDesp ({onAddDesp}){
         }
     }
 
+    const trigger = () =>{
+        addClasse()
+        addNome()
+        addValor()
+    }
+
     return(
         <div>
             <input type="text" value={nome} onChange={(e) => setNome(e.target.value)} placeholder="Nome" />
@@ -58,7 +64,7 @@ export default function InputDesp ({onAddDesp}){
 
             <div id="classeid" className=""></div>
 
-            <button onClick={(addNome)(addValor)(addClasse)}>Concluir</button>
+            <button onClick={trigger}>Concluir</button>
         </div>
     )
 }
