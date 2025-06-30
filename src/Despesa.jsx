@@ -1,9 +1,9 @@
-export default function despesa({nomeDespesa,onRemover}){ // (categoria, gasto, data)
-   const data = new Date();
+export default function Despesa({nomeDespesa,onRemover}){
+   //const data = new Date();
    
    return( 
     <li>
-      <p>{data}</p>
+      {/* <p>{data}</p> */}
       <button onClick={() => onRemover(nomeDespesa.id)}>Remover</button>
     </li>
  );
